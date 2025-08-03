@@ -1,4 +1,4 @@
 public interface PortadorDoAnel {
 
-    void carregarAnel();
+    void carregarAnel(Anel anel);
 }
