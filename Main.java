@@ -13,6 +13,8 @@ public class Main {
         System.out.println("Arma de Frodo " + frodo.getArma());
         frodo.ataque();
 
+        Orc orc = new Orc();
+        
         
     }
 }

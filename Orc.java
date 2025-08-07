@@ -5,5 +5,6 @@ public class Orc  extends Personagem{
         super(nome, raca, habilidades, arma, defesa);
     }
 
+    
 
 }
