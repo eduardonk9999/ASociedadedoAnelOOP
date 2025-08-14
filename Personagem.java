@@ -28,6 +28,22 @@ public class Personagem {
         this.defendendo = defendendo;
     }
 
+    public int atacar(Personagem alvo) {
+        int danoBruto = this.ataque;
+        int dano = Math.max(1, danoBruto - alvo.defesa);
+        if(alvo.defendendo) {
+            dano = Math.max(0, dano / 2);
+            alvo.defendendo = false;
+        }
+        alvo.receberDano(dano);
+        System.out.println(nome + " ataca " + alvo.nome + " com " + arma + " causando " + dano + " de dano.");
+        return dano;
+    }
+
+    public void receberDano(int dano) {
+        this.hp = Math.max(0, this.hp - dano);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -52,10 +68,7 @@ public class Personagem {
         System.out.println("Ataque padrão");
     }
 
-    public int atacar(Personagem alvo) {
-        int danoBruto = this.ataque;
-        
-    }
+    
 
 
 }
